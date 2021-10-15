@@ -9,5 +9,9 @@ namespace GD
     {
         public GameObject modelPrefab;
         public bool isUnarmed;
+
+        [Header("1H Sword Attack Animations")]
+        public string OH_Light_Attack_1;
+        public string OH_Heavy_Attack_1;
     }
 }

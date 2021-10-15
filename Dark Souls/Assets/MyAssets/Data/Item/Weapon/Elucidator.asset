@@ -16,3 +16,5 @@ MonoBehaviour:
   itemName: Elucidator
   modelPrefab: {fileID: 2260726655534775168, guid: 71c731fcc7ed97e0ab2a7a4f8bdf7c54, type: 3}
   isUnarmed: 0
+  OH_Light_Attack_1: OH_Light_Attack_01
+  OH_Heavy_Attack_1: OH_Heavy_Attack_01
