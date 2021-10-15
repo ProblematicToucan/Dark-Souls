@@ -14,6 +14,7 @@ namespace GD
 
         public bool isGrounded;
         public bool isInteracting;
+        public bool isDeath;
 
         void Start()
         {
@@ -30,17 +31,23 @@ namespace GD
 
             float delta = Time.deltaTime;
 
-            // InputHandler
+            // Essentials
             inputHandler.TickInput(delta);
-
-            // PlayerLocomotion
-            playerLocomotion.HandleMovement(delta);
             playerLocomotion.GroundedCheck();
-            playerLocomotion.HandleJumpAndGravity(delta);
-            playerLocomotion.HandleDodge(delta);
 
-            // PlayerAttacker
-            playerAttacker.HandlePlayerAttack(delta);
+            if (isDeath)
+            {
+                // Death XD
+                // Bikin respon jika pelayer die
+            }
+            else
+            {
+                playerLocomotion.HandleMovement(delta);
+                playerLocomotion.HandleJumpAndGravity(delta);
+                playerLocomotion.HandleDodge(delta);
+
+                playerAttacker.HandlePlayerAttack(delta);
+            }
         }
 
         private void FixedUpdate() {
