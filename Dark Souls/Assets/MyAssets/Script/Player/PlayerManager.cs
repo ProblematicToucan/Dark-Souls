@@ -32,18 +32,19 @@ namespace GD
             float delta = Time.deltaTime;
 
             // Essentials
-            inputHandler.TickInput(delta);
+            playerLocomotion.Gravity(delta);
             playerLocomotion.GroundedCheck();
 
             if (isDeath)
             {
-                // Death XD
+                animationHandler.anim.SetBool("IsInteracting", false);
                 // Bikin respon jika pelayer die
             }
             else
             {
+                inputHandler.TickInput(delta);
                 playerLocomotion.HandleMovement(delta);
-                playerLocomotion.HandleJumpAndGravity(delta);
+                playerLocomotion.HandleJump(delta);
                 playerLocomotion.HandleDodge(delta);
 
                 playerAttacker.HandlePlayerAttack(delta);

@@ -31,6 +31,8 @@ namespace GD
 
         public void TakeDamage(int damage)
         {
+            if (playerManager.isDeath) return;
+            
             currentHealth = currentHealth - damage;
 
             healthBar.SetCurrentHealth(currentHealth);

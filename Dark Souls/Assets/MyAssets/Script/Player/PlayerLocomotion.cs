@@ -79,12 +79,14 @@ namespace GD
             animationHandler.HandleUpdateAnimatorValues(0, inputHandler.moveAmount);
         }
 
-        public void HandleJumpAndGravity(float delta)
+        public void Gravity(float delta)
         {
             velocity.y += gravity * delta;
             controller.Move(velocity * delta);
-            // animationHandler.anim.SetBool("Jump", inputHandler.jumpFlag);
+        }
 
+        public void HandleJump(float delta)
+        {
             if (playerManager.isGrounded)
             {
                 fallTimeoutDelta = fallTimeout;

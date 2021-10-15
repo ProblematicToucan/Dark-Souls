@@ -11,7 +11,9 @@ namespace GD
         PlayerInventory playerInventory;
 
         [HideInInspector]
-        public float nextAttackTime = 0;
+        public float nextAttackTime = 0; // Attack & action interval
+
+        // public string lastAttack;
 
         bool lightAttack;
         bool heavyAttack;
