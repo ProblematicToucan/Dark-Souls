@@ -16,6 +16,8 @@ namespace GD
         public bool isInteracting;
         public bool isDeath;
 
+        public bool canCombo;
+
         void Start()
         {
             inputHandler = GetComponent<InputHandler>();
@@ -28,6 +30,7 @@ namespace GD
         void Update()
         {
             isInteracting = anim.GetBool("IsInteracting");
+            canCombo = anim.GetBool("CanCombo");
 
             float delta = Time.deltaTime;
 

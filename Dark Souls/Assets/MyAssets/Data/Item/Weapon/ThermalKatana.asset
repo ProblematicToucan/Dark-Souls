@@ -16,5 +16,7 @@ MonoBehaviour:
   itemName: Thermal Katana
   modelPrefab: {fileID: 1060911388281037178, guid: b11142303ad171bf0940d9651f2345e7, type: 3}
   isUnarmed: 0
-  OH_Light_Attack_1: OH_Light_Attack_01
-  OH_Heavy_Attack_1: OH_Heavy_Attack_01
+  oh_Light_Attack_1: 1H Sword Light Attack 01
+  oh_Light_Attack_2: 1H Sword Light Attack 02
+  oh_Light_Attack_3: 1H Sword Light Attack 03
+  oh_Heavy_Attack_1: 1H Sword Heavy Attack 01

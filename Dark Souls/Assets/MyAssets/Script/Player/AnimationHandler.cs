@@ -53,5 +53,15 @@ namespace GD
             playerLocomotion.controller.Move(rootMotion);
             rootMotion = Vector3.zero;
         }
+
+        public void EnableCombo()
+        {
+            anim.SetBool("CanCombo", true);
+        }
+
+        public void DisableCombo()
+        {
+            anim.SetBool("CanCombo", false);
+        }
     }
 }

@@ -11,7 +11,9 @@ namespace GD
         public bool isUnarmed;
 
         [Header("1H Sword Attack Animations")]
-        public string OH_Light_Attack_1;
-        public string OH_Heavy_Attack_1;
+        public string oh_Light_Attack_1;
+        public string oh_Light_Attack_2;
+        public string oh_Light_Attack_3;
+        public string oh_Heavy_Attack_1;
     }
 }
