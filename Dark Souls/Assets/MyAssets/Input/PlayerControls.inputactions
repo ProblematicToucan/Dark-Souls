@@ -118,6 +118,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Swap Weapon",
+                    "type": "Button",
+                    "id": "69352e10-f38b-462e-bbd2-541164552264",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -184,6 +192,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "RT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00f9d601-3b8d-4a5c-bba5-cd9df5c3fb63",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Swap Weapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

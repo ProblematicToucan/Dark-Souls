@@ -19,6 +19,8 @@ namespace GD
         public bool j_Input;
         [HideInInspector]
         public bool d_Input;
+        // [HideInInspector]
+        public bool q_input;
         [HideInInspector]
         public bool rb_Input;
         [HideInInspector]
@@ -58,6 +60,7 @@ namespace GD
             JumpInput();
             DodgeInput();
             AttackInput();
+            SwapWeaponInput();
         }
 
         void MoveInput()
@@ -83,6 +86,12 @@ namespace GD
         {
             rb_Input = inputActions.PlayerActions.RB.phase == UnityEngine.InputSystem.InputActionPhase.Started;
             rt_Input = inputActions.PlayerActions.RT.phase == UnityEngine.InputSystem.InputActionPhase.Started;
+        }
+    
+        void SwapWeaponInput()
+        {
+            // q_input = inputActions.PlayerActions.SwapWeapon.phase == UnityEngine.InputSystem.InputActionPhase.Performed;
+            inputActions.PlayerActions.SwapWeapon.performed += _ => q_input = true;
         }
     }
 }

@@ -10,6 +10,7 @@ namespace GD
         InputHandler inputHandler;
         AnimationHandler animationHandler;
         PlayerAttacker playerAttacker;
+        PlayerInventory playerInventory;
         Animator anim;
 
         public bool isGrounded;
@@ -24,6 +25,7 @@ namespace GD
             playerLocomotion = GetComponent<PlayerLocomotion>();
             animationHandler = GetComponentInChildren<AnimationHandler>();
             playerAttacker = GetComponent<PlayerAttacker>();
+            playerInventory = GetComponent<PlayerInventory>();
             anim = GetComponentInChildren<Animator>();
         }
 
@@ -51,6 +53,8 @@ namespace GD
                 playerLocomotion.HandleDodge(delta);
 
                 playerAttacker.HandlePlayerAttack(delta);
+
+                playerInventory.SwapWeapon();
             }
         }
 

@@ -613,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: 3769d5be7ad558456b0b13bcba11163d, type: 2}
     - target: {fileID: 5866666021909216657, guid: 32681eb96ab25df45bf0330997d896ab, type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32681eb96ab25df45bf0330997d896ab, type: 3}
@@ -3348,7 +3348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &692348712
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3938,7 +3938,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.052960876, y: 0.00000038370766, z: -0.00000002034693, w: 0.9985966}
+  m_LocalRotation: {x: 0.052960876, y: 0.00000037505768, z: -0.000000019894424, w: 0.9985966}
   m_LocalPosition: {x: 0, y: 2.5, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -4220,6 +4220,7 @@ MonoBehaviour:
   isGrounded: 0
   isInteracting: 0
   isDeath: 0
+  canCombo: 0
 --- !u!114 &1123368587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4237,6 +4238,7 @@ MonoBehaviour:
   moveAmount: 0
   j_Input: 0
   d_Input: 0
+  q_input: 0
   rb_Input: 0
   rt_Input: 0
   jumpFlag: 0
@@ -4253,8 +4255,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b96f8bbc1faf560f9f5b3b8051c077c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftWeapon: {fileID: 11400000, guid: 242dc6c80baed9075ba6b733b9586cc9, type: 2}
-  rightWeapon: {fileID: 11400000, guid: 242dc6c80baed9075ba6b733b9586cc9, type: 2}
+  leftWeapon: {fileID: 0}
+  rightWeapon: {fileID: 0}
+  unarmedWeapon: {fileID: 11400000, guid: 629bcc4c029884b2390a50ca3f102ed2, type: 2}
+  weaponInRightHandSlots:
+  - {fileID: 11400000, guid: 6483900993db2900282a4f6f97a46d18, type: 2}
+  - {fileID: 11400000, guid: 242dc6c80baed9075ba6b733b9586cc9, type: 2}
+  weaponInLeftHandSlots:
+  - {fileID: 11400000, guid: 6483900993db2900282a4f6f97a46d18, type: 2}
+  - {fileID: 11400000, guid: 242dc6c80baed9075ba6b733b9586cc9, type: 2}
+  currentRightWeaponIndex: -1
+  currentLeftWeaponIndex: -1
 --- !u!114 &1123368589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4268,6 +4279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextAttackTime: 0
+  lastAttack: 
   lightAttackRate: 2.5
   heavyAttackRate: 1
 --- !u!114 &1123368590
@@ -4478,7 +4490,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181247878}
-  m_LocalRotation: {x: 0.07111608, y: 0.00000036179097, z: -0.000000025794469, w: 0.99746805}
+  m_LocalRotation: {x: 0.07111609, y: 0.0000003961166, z: -0.000000028241775, w: 0.99746805}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5610,7 +5622,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1867801378}
-  m_LocalRotation: {x: 0.05296087, y: 0.0000003836782, z: -0.000000020348486, w: 0.9985966}
+  m_LocalRotation: {x: 0.05296087, y: 0.0000003750871, z: -0.000000019892852, w: 0.9985966}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
