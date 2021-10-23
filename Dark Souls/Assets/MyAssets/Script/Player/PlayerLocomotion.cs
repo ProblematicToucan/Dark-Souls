@@ -41,6 +41,7 @@ namespace GD
         Vector3 velocity;
         float jumpTimeoutDelta;
         float fallTimeoutDelta;
+        float layerWeightDelta;
 
         void Start()
         {
@@ -95,8 +96,13 @@ namespace GD
                 
                 if (velocity.y < 0f) velocity.y = -2f;
 
+                animationHandler.anim.SetLayerWeight(1, Mathf.SmoothDamp(animationHandler.anim.GetLayerWeight(1),
+                    1, ref layerWeightDelta, 0.2f));
+
                 if (playerManager.isInteracting) return;
+
                 animationHandler.anim.SetBool("Jump", inputHandler.jumpFlag);
+
                 if (inputHandler.jumpFlag && jumpTimeoutDelta <= 0.0f)
                 {
                     velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
@@ -108,6 +114,9 @@ namespace GD
             {
                 animationHandler.anim.SetBool("Jump", inputHandler.jumpFlag);
                 jumpTimeoutDelta = jumpTimeout;
+
+                animationHandler.anim.SetLayerWeight(1, Mathf.SmoothDamp(animationHandler.anim.GetLayerWeight(1),
+                    0, ref layerWeightDelta, 0.1f));
 
                 if (fallTimeoutDelta >= 0.0f)
                 {

@@ -10,6 +10,9 @@ namespace GD
         public GameObject modelPrefab;
         public bool isUnarmed;
 
+        [Header("Weapon Idle Animations")]
+        public string weaponIdle;
+
         [Header("1H Sword Attack Animations")]
         public string oh_Light_Attack_1;
         public string oh_Light_Attack_2;

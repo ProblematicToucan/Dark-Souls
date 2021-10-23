@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: Elucidator
   modelPrefab: {fileID: 2260726655534775168, guid: 71c731fcc7ed97e0ab2a7a4f8bdf7c54, type: 3}
   isUnarmed: 0
+  weaponIdle: Oriental Sword
   oh_Light_Attack_1: 1H Sword Light Attack 01
   oh_Light_Attack_2: 1H Sword Light Attack 02
   oh_Light_Attack_3: 1H Sword Light Attack 03

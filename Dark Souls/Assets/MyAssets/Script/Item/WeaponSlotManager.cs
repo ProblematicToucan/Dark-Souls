@@ -12,7 +12,12 @@ namespace GD
         DamageCollider leftHandDamageCollider;
         DamageCollider rightHandDamageCollider;
 
-        private void Awake() {
+        Animator anim;
+
+        private void Awake()
+        {
+            anim = GetComponent<Animator>();
+
             WeaponHolderSlot[] weaponHolderSlots = GetComponentsInChildren<WeaponHolderSlot>();
             foreach (WeaponHolderSlot weaponSlot in weaponHolderSlots)
             {
@@ -38,6 +43,15 @@ namespace GD
             {
                 rightHandSlot.LoadWeaponModel(weaponItem);
                 LoadRightWeaponDamageCollider();
+            }
+            
+            if (weaponItem != null)
+            {
+                anim.CrossFade(weaponItem.weaponIdle, 0.2f);
+            }
+            else
+            {
+                anim.CrossFade("Empty Weapon Idle", 0.2f);
             }
         }
 

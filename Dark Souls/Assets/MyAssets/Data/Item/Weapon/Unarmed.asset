@@ -16,6 +16,7 @@ MonoBehaviour:
   itemName: 
   modelPrefab: {fileID: 5486697109909697384, guid: 73d71628688c422fbaaa6a653a2a05b2, type: 3}
   isUnarmed: 1
+  weaponIdle: Fist
   oh_Light_Attack_1: 1H Sword Light Attack 01
   oh_Light_Attack_2: 1H Sword Light Attack 02
   oh_Light_Attack_3: 1H Sword Light Attack 03
